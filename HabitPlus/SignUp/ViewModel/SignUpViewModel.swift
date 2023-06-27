@@ -14,6 +14,7 @@ class SignUpViewModel: ObservableObject {
     @Published var document = ""
     @Published var phone    = ""
     @Published var birthday = ""
+    @Published var gender = Gender.male
     //TODO gender
     
 }

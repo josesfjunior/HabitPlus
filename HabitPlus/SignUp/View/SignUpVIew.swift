@@ -18,7 +18,6 @@ struct SignUpView: View {
                             .foregroundColor(.black)
                             .font(.title)
                             .bold()
-                            .multilineTextAlignment(.center)
                             .padding(.bottom, 8)
                         
                         emailField
@@ -31,7 +30,7 @@ struct SignUpView: View {
                         
                         phoneField
                         
-                        birthdayField
+                        genderField
                         
                         enterButton
                     }
@@ -60,23 +59,35 @@ extension SignUpView {
     }
     
     var documentField: some View {
-        TextField("", text: $viewModel.email)
+        TextField("", text: $viewModel.document)
             .border(.black)
     }
     
     var fullNameField: some View {
-        TextField("", text: $viewModel.email)
+        TextField("", text: $viewModel.fullName)
             .border(.black)
     }
     
     var phoneField: some View {
-        TextField("", text: $viewModel.email)
+        TextField("", text: $viewModel.phone)
             .border(.black)
     }
     
     var birthdayField: some View {
-        TextField("", text: $viewModel.email)
+        TextField("", text: $viewModel.birthday)
             .border(.black)
+    }
+    
+    var genderField: some View {
+        Picker("Gender", selection: $viewModel.gender){
+            ForEach(Gender.allCases, id: \.self) {
+                value in
+                Text(value.rawValue)
+                    .tag(value)
+            }
+        }.pickerStyle(.segmented)
+            .padding(.top, 16)
+            .padding(.bottom, 32)
     }
     
     var enterButton: some View {
