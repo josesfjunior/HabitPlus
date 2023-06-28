@@ -13,6 +13,8 @@
 		15A10E0B2A4B618800017A0B /* SignUpVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10E0A2A4B618800017A0B /* SignUpVIew.swift */; };
 		15A10E0D2A4B624700017A0B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10E0C2A4B624700017A0B /* SignUpViewModel.swift */; };
 		15A10E102A4B6F4600017A0B /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10E0F2A4B6F4600017A0B /* Gender.swift */; };
+		15A10E132A4B84ED00017A0B /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10E122A4B84ED00017A0B /* SignUpUIState.swift */; };
+		15A10E152A4B85CB00017A0B /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A10E142A4B85CB00017A0B /* SignUpViewRouter.swift */; };
 		15CB49D12A3B87A900B646A1 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB49D02A3B87A900B646A1 /* HabitPlusApp.swift */; };
 		15CB49D52A3B87AB00B646A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CB49D42A3B87AB00B646A1 /* Assets.xcassets */; };
 		15CB49D92A3B87AB00B646A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CB49D82A3B87AB00B646A1 /* Preview Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		15A10E0A2A4B618800017A0B /* SignUpVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVIew.swift; sourceTree = "<group>"; };
 		15A10E0C2A4B624700017A0B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		15A10E0F2A4B6F4600017A0B /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		15A10E122A4B84ED00017A0B /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
+		15A10E142A4B85CB00017A0B /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 		15CB49CD2A3B87A900B646A1 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CB49D02A3B87A900B646A1 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
 		15CB49D42A3B87AB00B646A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		15A10E072A4B613800017A0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15A10E122A4B84ED00017A0B /* SignUpUIState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				15A10E0C2A4B624700017A0B /* SignUpViewModel.swift */,
+				15A10E142A4B85CB00017A0B /* SignUpViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 				156120FD2A43581800E5D975 /* SignInViewRouter.swift in Sources */,
 				15CB49EB2A3BB2EB00B646A1 /* SplashViewModel.swift in Sources */,
 				15CB49F22A3BB76B00B646A1 /* SignInView.swift in Sources */,
+				15A10E152A4B85CB00017A0B /* SignUpViewRouter.swift in Sources */,
+				15A10E132A4B84ED00017A0B /* SignUpUIState.swift in Sources */,
 				155DBB602A40D01F00CEB6E3 /* SignInUIState.swift in Sources */,
 				15A10E102A4B6F4600017A0B /* Gender.swift in Sources */,
 				15CB49F62A3BBA3000B646A1 /* SplashViewRouter.swift in Sources */,

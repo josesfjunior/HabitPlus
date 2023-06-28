@@ -9,34 +9,21 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .center) {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Cadastro")
-                            .foregroundColor(.black)
-                            .font(.title)
-                            .bold()
-                            .padding(.bottom, 8)
-                        
-                        emailField
-                        
-                        passwordlField
-                        
-                        documentField
-                        
-                        fullNameField
-                        
-                        phoneField
-                        
-                        genderField
-                        
-                        enterButton
-                    }
-                    Spacer()
-                } .padding(.horizontal, 8)
+                signUpViewPage
             }.padding()
+            
+            if case SignUPUiState.error(let value) = viewModel.uiState{
+                Text("")
+                    .alert(isPresented: .constant(true)){
+                        Alert(title: Text("Falha ao validar"), message: Text(value), dismissButton: .default(Text("Ok")){
+                            //Vai fazer algo
+                        })
+                    }
+            }
         }
     }
 }
@@ -48,6 +35,34 @@ struct SignUpView_Previews: PreviewProvider {
 }
 
 extension SignUpView {
+    
+    var signUpViewPage: some View{
+        VStack(alignment: .center) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Cadastro")
+                    .foregroundColor(.black)
+                    .font(.title)
+                    .bold()
+                    .padding(.bottom, 8)
+                
+                emailField
+                
+                passwordlField
+                
+                documentField
+                
+                fullNameField
+                
+                phoneField
+                
+                genderField
+                
+                enterButton
+            }
+            Spacer()
+        } .padding(.horizontal, 8)
+    }
+    
     var emailField: some View {
         TextField("", text: $viewModel.email)
             .border(.black)
@@ -92,7 +107,7 @@ extension SignUpView {
     
     var enterButton: some View {
         Button("Realize seu Cadastro") {
-            //vai fazer algo
+            viewModel.signUp()
         }
     }
 }
